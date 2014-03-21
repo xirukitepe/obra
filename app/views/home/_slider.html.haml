@@ -1,7 +1,7 @@
 .slider-wrapper.theme-dark
   #slider.nivoSlider
     - @random_cover_photos.each do |foto| 
-      %img{alt: "", "data-thumb" => "images/up.jpg", src: foto.comic_chapters.first.comic_images.where(cover_photo: true).first.try(:comic), title: "This is an example of a caption"}/
+      %img{alt: "", "data-thumb" => "images/up.jpg", src: foto.cover_photo, title: "This is an example of a caption"}/
   #htmlcaption.nivo-html-caption
     %strong This
     is an example of a
