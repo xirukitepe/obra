@@ -1,6 +1,6 @@
 .container-fluid
   = render "slider"
-  <b>WHAT'S HOT</b>
+  <div class="ribbon">WHAT'S HOT</div>
   %br/
   %br/
   .slider1
@@ -18,7 +18,7 @@
           %img{src: new_release.comic_chapters.first.comic_images.where(cover_photo: true).first.try(:comic)}/
     .slide= "No Comics Found" if @new_realease.empty?
   %br/
-  <b>RECENTLY UPDATED</b>
+  <div class="ribbon">RECENTLY UPDATED</div>
   %br/
   %br/
   .slider1

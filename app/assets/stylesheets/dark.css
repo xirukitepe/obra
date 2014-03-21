@@ -16,7 +16,8 @@ Supports Thumbs: true
 	position:relative;
 	background:#fff url(/assets/loading.gif) no-repeat 50% 50%;
     margin-bottom:10px;
-    overflow: visible;
+    overflow: hidden;
+    height: 350px;
 }
 .theme-dark .nivoSlider img {
 	position:absolute;

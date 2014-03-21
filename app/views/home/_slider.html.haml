@@ -1,10 +1,7 @@
 .slider-wrapper.theme-dark
   #slider.nivoSlider
-    %img{alt: "", "data-thumb" => "assets/toystory.jpg", src: "assets/toystory.jpg"}/
-    %a{href: "http://dev7studios.com"}
-      %img{alt: "", "data-thumb" => "images/up.jpg", src: "assets/up.jpg", title: "This is an example of a caption"}/
-    %img{alt: "", "data-thumb" => "assets/walle.jpg", "data-transition" => "slideInLeft", src: "assets/walle.jpg"}/
-    %img{alt: "", "data-thumb" => "assets/nemo.jpg", src: "assets/nemo.jpg", title: "#htmlcaption"}/
+    - @random_cover_photos.each do |foto| 
+      %img{alt: "", "data-thumb" => "images/up.jpg", src: foto.comic_chapters.first.comic_images.where(cover_photo: true).first.try(:comic), title: "This is an example of a caption"}/
   #htmlcaption.nivo-html-caption
     %strong This
     is an example of a

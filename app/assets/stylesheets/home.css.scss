@@ -32,3 +32,44 @@ body{
 .search-works{
 	margin-top: 5px;
 }
+
+
+.ribbon {
+    overflow:visible;
+ position:relative;
+    left: -40px;
+    width:99.8%;
+    height:25px;
+    background:#333;
+    color: white;
+    padding: 20px 40px;
+    font-size:24px;
+    font-weight:bold;
+    border-radius:5px 5px 0 0;
+    box-shadow:0 0 8px #333;
+    text-shadow:0 0 8px #000;
+}
+
+.ribbon:before{
+    content:'';
+ overflow:visible;
+    position:absolute;
+    bottom:-20px;
+    left:0;
+    border-top:solid 10px #333;
+    border-right:solid 10px #333;
+    border-bottom:solid 10px transparent;
+    border-left:solid 10px transparent;
+}
+
+.ribbon:after{
+    content:'';
+ overflow:visible;
+    position:absolute;
+    bottom:-20px;
+    right:0;
+    border-top:solid 10px #333;
+    border-right:solid 10px transparent;
+    border-bottom:solid 10px transparent;
+    border-left:solid 10px #333;
+}
