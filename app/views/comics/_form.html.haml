@@ -18,5 +18,6 @@
     = f.fields_for :comic_chapters, html: {multipart: true} do |chapter|
       = render 'comic_chapter_fields', :f => chapter
     .links.btn.btn-primary
-      = link_to_add_association 'add Chapter', f, :comic_chapters
-  = f.submit
+      = link_to_add_association 'add Chapter', f, :comic_chapters, class:"add-chapter"
+  %br
+  = f.submit class:"btn btn-primary"

@@ -9,7 +9,7 @@
         %img.logo{src: "/assets/logo.png"}
       .nav-collapse.collapse
         %ul.nav.menu
-          %li
+          %li.active
             %a Home
           %li.dropdown
             %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
