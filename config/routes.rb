@@ -22,6 +22,7 @@ Obra::Application.routes.draw do
   resources :comics do
     collection do
       get 'free'
+      post :sort
     end
 
     resources :comic_chapters do
