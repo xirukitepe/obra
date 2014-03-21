@@ -11,7 +11,7 @@
       = f.text_area :synopsis
     - Comic::CATEGORIES.each do |key,val|
       .field
-        - if @comic.category.include?(key.to_s)
+        - if !@comic.category.blank? and @comic.category.include?(key.to_s)
           = check_box_tag "comic[category][]", key , checked: true
         - else
           = check_box_tag "comic[category][]", key

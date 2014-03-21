@@ -21,11 +21,14 @@ class ComicsController < ApplicationController
         d = params[:comic][:comic_chapters_attributes].first
         files = d[1][:comic_image]
         chap_id = @comic.comic_chapters.first
+        i = 1
         files.each do |img|
           cmg = ComicImage.new
           cmg.comic_chapter = chap_id
           cmg.comic = img
+          cmg.cover_photo = true if i.eql?(1)
           cmg.save
+          i += 1
         end
       end
     else
@@ -60,7 +63,7 @@ class ComicsController < ApplicationController
   end
 
   def comic_params
-    params[:comic][:category] = params[:comic][:category].join(',')
+    params[:comic][:category] = params[:comic][:category].join(',')  if params[:comic][:category].present?
     params.require(:comic).permit(:title, :synopsis, :downloadable, :user_id, :date, :category, comic_chapters_attributes: [:id, :title, :_destroy])
   end
 
