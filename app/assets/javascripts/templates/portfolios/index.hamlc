@@ -5,7 +5,7 @@
   .container-fluid
     .row.profiler
       .span2
-        %img{src:"http://a.wattpad.com/useravatar/Prettydonnapot.128.510238.jpg",class:"img-polaroid"}
+        %img{data: {"ng-src" => "{{user.photo}}", class:"img-polaroid"}
       .span4
         %table
           %tr

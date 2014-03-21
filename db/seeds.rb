@@ -61,32 +61,32 @@ ch3 = ComicChapter.create(
 i1 = ComicImage.create(
     comic_chapter_id: ch1.id,
     cover_photo: true,
-    comic: File.open("/Users/ruthgares/Downloads/testpix/bird1.jpeg")
+    comic: File.open("#{Rails.root}/public/testpix/bird1.jpeg")
 )
 i2 = ComicImage.create(
     comic_chapter_id: ch1.id,
     cover_photo: false,
-    comic: File.open("/Users/ruthgares/Downloads/testpix/bird2.jpeg")
+    comic: File.open("#{Rails.root}/public/testpix/bird2.jpeg")
 )
 i3 = ComicImage.create(
     comic_chapter_id: ch1.id,
     cover_photo: false,
-    comic: File.open("/Users/ruthgares/Downloads/testpix/bird3.jpeg")
+    comic: File.open("#{Rails.root}/public/testpix/bird3.jpeg")
 )
 i4 = ComicImage.create(
     comic_chapter_id: ch2.id,
     cover_photo: true,
-    comic: File.open("/Users/ruthgares/Downloads/testpix/dog1.jpeg")
+    comic: File.open("#{Rails.root}/public/testpix/dog1.jpeg")
 )
 i5 = ComicImage.create(
     comic_chapter_id: ch2.id,
     cover_photo: false,
-    comic: File.open("/Users/ruthgares/Downloads/testpix/dog2.jpeg")
+    comic: File.open("#{Rails.root}/public/testpix/dog2.jpeg")
 )
 i6 = ComicImage.create(
     comic_chapter_id: ch2.id,
     cover_photo: false,
-    comic: File.open("/Users/ruthgares/Downloads/testpix/dog3.jpeg")
+    comic: File.open("#{Rails.root}/public/testpix/dog3.jpeg")
 )
 
 i7 = ComicImage.create(
