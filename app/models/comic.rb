@@ -1,6 +1,5 @@
 class Comic < ActiveRecord::Base
   include Concerns::Comic::JsonBuilder
-  
   has_many :comic_chapters, dependent: :destroy
   has_many :feedbacks, dependent: :destroy
   belongs_to :user

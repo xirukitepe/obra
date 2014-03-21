@@ -1,61 +1,52 @@
-.container-fluid
-  .row.profiler
-    .span2
-      %img{src:"http://a.wattpad.com/useravatar/Prettydonnapot.128.510238.jpg",class:"img-polaroid"}
-    .span4
-      %table
-        %tr
-          %td{width:"60%"}
-            Name
-          %td
-            Ugat Salabat
-        %tr
-          %td{width:"55%"}
-            Contact No.
-          %td
-            09178061524
-        %tr
-          %td{width:"55%"}
-            Birthday
-          %td
-            October 5, 1991
-        %tr
-          %td{width:"60%"}
-            Likes received
-          %td
-            154
-  %hr
-  
-    <b>MY COMICS STAND</b>
-    <br/>
-    <br/>
-    .row.profiler
-      .span2
-        %img{src:"/assets/sample.jpg",class:"img-polaroid"}
-      .span4
-        %h4
-          TITLE GOES HERE
-        %p
-          Some description here....
-        %span
-          79 comments
-          %img{src:"/assets/comment-icon.png"}
-          | 
-          29 likes
-          %img{src:"/assets/star.png"}
-    %br
+%nav-menus
 
+
+.container.wrapper
+  .container-fluid
     .row.profiler
       .span2
-        %img{src:"/assets/sample.jpg",class:"img-polaroid"}
+        %img{src:"http://a.wattpad.com/useravatar/Prettydonnapot.128.510238.jpg",class:"img-polaroid"}
       .span4
-        %h4
-          TITLE GOES HERE
-        %p
-          Some description here....
-        %span
-          99 comments
-          %img{src:"/assets/comment-icon.png"}
-          | 
-          24 likes
-          %img{src:"/assets/star.png"}
+        %table
+          %tr
+            %td{width:"60%"}
+              Name
+            %td
+              {{ user.name }}
+          %tr
+            %td{width:"55%"}
+              Contact No.
+            %td
+              09178061524
+          %tr
+            %td{width:"55%"}
+              Birthday
+            %td
+              {{ user.birthday}}
+          %tr
+            %td{width:"60%"}
+              Likes received
+            %td
+              {{ user.total_likes }}
+    %hr
+    
+      <b>MY COMICS STAND</b>
+      <br/>
+      <br/>
+      .row.profiler{data: {"ng-repeat" => "comic in comics"}}
+        .span2
+          %img{src:"/assets/sample.jpg",class:"img-polaroid"}
+        .span4
+          %h4
+            {{ comic.title }}
+          %p
+            {{ comic.synopsis }}
+          %span
+            79 comments
+            %img{src:"/assets/comment-icon.png"}
+            | 
+            {{ comic.no_likes }} likes
+            %img{src:"/assets/star.png"}
+        %br
+
+      

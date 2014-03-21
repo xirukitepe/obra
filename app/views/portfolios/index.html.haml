@@ -1,76 +1,76 @@
-.container-fluid
-  .row.profiler
-    .span2
-      %img{src: @user.pic,class:"img-polaroid"}
-    .span4
-      %table
-        %tr
-          %td{width:"60%"}
-            Name
-          %td
-            = "#{@user.firstname} #{@user.lastname}"
-        %tr
-          %td{width:"50%"}
-            Contact No:
-          %td
-            = @user.contact_no
-        %tr
-          %td{width:"55%"}
-            Birthday
-          %td
-            = @user.birthday.try(:strftime, '%m/%d/%Y')
-        %tr
-          %td{width:"60%"}
-            Likes received
-          %td
-            = @user.total_likes
-  %hr
+-# .container-fluid
+-#   .row.profiler
+-#     .span2
+-#       %img{src: @user.pic,class:"img-polaroid"}
+-#     .span4
+-#       %table
+-#         %tr
+-#           %td{width:"60%"}
+-#             Name
+-#           %td
+-#             = "#{@user.firstname} #{@user.lastname}"
+-#         %tr
+-#           %td{width:"50%"}
+-#             Contact No:
+-#           %td
+-#             = @user.contact_no
+-#         %tr
+-#           %td{width:"55%"}
+-#             Birthday
+-#           %td
+-#             = @user.birthday.try(:strftime, '%m/%d/%Y')
+-#         %tr
+-#           %td{width:"60%"}
+-#             Likes received
+-#           %td
+-#             = @user.total_likes
+-#   %hr
   
-    %b MY COMIC STAND
-    %br
-    %br
-    - @comics.each do |comic|
-      .row.profiler
-        .span2
-          %img{src:"/assets/sample.jpg",class:"img-polaroid"}
-        .span4
-          %h4
-            TITLE GOES HERE
-          %p
-            Some description here....
-    .row.profiler
-      .span2
-        %img{src:"/assets/sample.jpg",class:"img-polaroid"}
-      .span4
-        %h4
-          TITLE GOES HERE
-        %p
-          Some description here....
-        %span
-          79 comments
-          %img{src:"/assets/comment-icon.png"}
-          | 
-          29 likes
-          %img{src:"/assets/star.png"}
-    %br
+-#     %b MY COMIC STAND
+-#     %br
+-#     %br
+-#     - @comics.each do |comic|
+-#       .row.profiler
+-#         .span2
+-#           %img{src:"/assets/sample.jpg",class:"img-polaroid"}
+-#         .span4
+-#           %h4
+-#             TITLE GOES HERE
+-#           %p
+-#             Some description here....
+-#     .row.profiler
+-#       .span2
+-#         %img{src:"/assets/sample.jpg",class:"img-polaroid"}
+-#       .span4
+-#         %h4
+-#           TITLE GOES HERE
+-#         %p
+-#           Some description here....
+-#         %span
+-#           79 comments
+-#           %img{src:"/assets/comment-icon.png"}
+-#           | 
+-#           29 likes
+-#           %img{src:"/assets/star.png"}
+-#     %br
 
-    .row.profiler
-      .span2
-        %img{src:"/assets/sample.jpg",class:"img-polaroid"}
-      .span4
-        %h4
-          TITLE GOES HERE
-        %p
-          Some description here....
-        %span
-          99 comments
-          %img{src:"/assets/comment-icon.png"}
-          | 
-          24 likes
-          %img{src:"/assets/star.png"}
+-#     .row.profiler
+-#       .span2
+-#         %img{src:"/assets/sample.jpg",class:"img-polaroid"}
+-#       .span4
+-#         %h4
+-#           TITLE GOES HERE
+-#         %p
+-#           Some description here....
+-#         %span
+-#           99 comments
+-#           %img{src:"/assets/comment-icon.png"}
+-#           | 
+-#           24 likes
+-#           %img{src:"/assets/star.png"}
     
 
 
-  - if current_user.eql?(@user)
-    = link_to 'New Comic', new_comic_path
+-#   - if current_user.eql?(@user)
+-#     = link_to 'New Comic', new_comic_path
 

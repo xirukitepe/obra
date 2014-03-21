@@ -12,7 +12,11 @@ Obra::Application.routes.draw do
   match "/home/comics" => "home#comics", via: [:get]
 
   resources :users do
-    resources :portfolios, only: [:index]
+    resources :portfolios, only: [:index] do
+      collection do
+        get 'list'
+      end
+    end
   end
 
   resources :comics do

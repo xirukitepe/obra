@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  include Concerns::User::JsonBuilder
+
   has_many :comics
 
   has_attached_file :pic
@@ -11,5 +13,9 @@ class User < ActiveRecord::Base
 
   def total_likes
     comics.sum(:no_likes)
+  end
+
+  def name
+    [firstname, lastname].join(' ')
   end
 end

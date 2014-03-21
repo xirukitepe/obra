@@ -1,11 +1,13 @@
 @Obra.config ($locationProvider, $routeProvider) ->
   $locationProvider.html5Mode(true)
-  $routeProvider.when("/welcome",
-    controller: "IndexController"
-    template: JST["home/index"]
-  ).when("/users/:id/portfolios",
-    controller: "IndexController"
+  $routeProvider.when("/users/:id/portfolios",
+    controller: "PortfoliosIndexController"
     template: JST["portfolios/index"]
+    redirectTo: (current, path, search) ->
+      if search.goto
+        path + search.goto
+      else
+        path
   ).when("/comics/free",
     controller: "ComicsFreeController"
     template: JST["comics/free"]
@@ -13,3 +15,9 @@
     controller: "ComicsShowController"
     template: JST["comics/show"]
   )
+
+
+  # .when("/welcome",
+  #   controller: "IndexController"
+  #   template: JST["home/index"]
+  #   
