@@ -6,19 +6,15 @@
           %td{width:"30%"}
             %img{src:"/assets/sample.jpg",class:"img-polaroid"}
           %td
-            %h4
-              TITLE GOES HERE
-            %p
-              Some description here.... Some description here.... Some description here.... Some description here....
-              Some description here....
-              Some description here....
-              Some description here....
+            %h4 {{ data.comic.title }}
+            %p {{ data.comic.synopsis }}
+
               %br
               %br
               %span
                 79 comments
                 %img{src:"/assets/comment-icon.png"}
-                | 
+                |
                 29 likes
                 %img{src:"/assets/star.png"}
   .row.profiler
@@ -48,8 +44,3 @@
     .span12
       <h5>Leave a comment</h5>
       %textarea
-
-
-
-
-      
