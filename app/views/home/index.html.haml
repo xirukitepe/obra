@@ -1,6 +1,6 @@
 .container-fluid
   = render "slider"
-  WHAT'S HOT
+  <b>WHAT'S HOT</b>
   %br/
   %br/
   .slider1
@@ -9,7 +9,6 @@
         = link_to comic_path(hot) do
           %img{src: hot.comic_chapters.first.comic_images.where(cover_photo: true).first.try(:comic)}/
     .slide= "No Comics Found" if @hots.empty?
-  RECENTLY PUBLISHED
   %br/
   %br/
   .slider1
@@ -19,7 +18,7 @@
           %img{src: new_release.comic_chapters.first.comic_images.where(cover_photo: true).first.try(:comic)}/
     .slide= "No Comics Found" if @new_realease.empty?
   %br/
-  RECENTLY UPDATED
+  <b>RECENTLY UPDATED</b>
   %br/
   %br/
   .slider1
