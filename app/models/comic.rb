@@ -9,4 +9,8 @@ class Comic < ActiveRecord::Base
   scope :new_realease, lambda{|start_date,end_date| where('date >= ? and date <= ?',start_date,end_date)}
   scope :recent_updates, lambda{|start_date,end_date| where('update_chapter >= ? and update_chapter <= ?',start_date,end_date)}
 
+  def cover_photo
+    comic_chapters.first.comic_images.where(cover_photo: true).first.try(:comic)
+  end
+
 end

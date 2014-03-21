@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
   before_filter :authenticate_user!
 
   def after_sign_in_path_for(resource)
-    portfolios_path
+    user_portfolios_path(resource)
   end
 end

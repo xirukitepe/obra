@@ -12,6 +12,7 @@ class HomeController < ApplicationController
     @hots = def_com if @hots.empty?
     @new_realease = def_com if @new_realease.empty?
     @updates = def_com if @updates.empty?
+    @random_cover_photos = Comic.all.sample(4)
   end
 
   def home
