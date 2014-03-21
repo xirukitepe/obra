@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  comic_id: 1
+  title: MyString
+  chapter_no: 1
+
+two:
+  comic_id: 1
+  title: MyString
+  chapter_no: 1

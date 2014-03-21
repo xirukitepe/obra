@@ -7,6 +7,13 @@ Obra::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
+  resources :portfolios, only: [:index]
+  resources :comics do
+    resources :comic_chapters do
+      resources :comic_images
+    end
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

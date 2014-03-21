@@ -1,0 +1,7 @@
+@Obra.config ($locationProvider, $routeProvider) ->
+  $locationProvider.html5Mode(true)
+  $routeProvider.when("/",
+    controller: "IndexController"
+    template: JST["home/index"]
+
+  )

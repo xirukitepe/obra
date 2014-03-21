@@ -1,0 +1,43 @@
+.navbar.navbar-default.navbar-fixed-top
+  .navbar-inner
+    .container
+      %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", type: "button"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.brand{href: "#"}
+        %img.logo{src: "/assets/logo.png"}/
+      .nav-collapse.collapse
+        %ul.nav.menu
+          %li
+            %form.form-search
+              .input-append
+                %input.span2.search-query{type: "text"}/
+                %button.btn{type: "submit"}
+                  %i.glyphicon-search
+          %li.active
+            %a{href: root_path } Home
+          %li{class: "#share"}
+            %a{href: "#"} Share your works
+          %li
+            %a{href: "#about"} Join our community
+          %li
+            %a{href: "#contact"} Login
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+              Categories
+              %b.caret
+            %ul.dropdown-menu
+              %li
+                %a{href: "#"} Action
+              %li
+                %a{href: "#"} Another action
+              %li
+                %a{href: "#"} Something else here
+              %li.divider
+              %li.nav-header Nav header
+              %li
+                %a{href: "#"} Separated link
+              %li
+                %a{href: "#"} One more separated link
+      / /.nav-collapse
