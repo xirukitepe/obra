@@ -1,0 +1,39 @@
+.navbar.navbar-default.navbar-fixed-top
+  .navbar-inner
+    .container
+      %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", type: "button"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.brand{href: "/"}
+        %img.logo{src: "/assets/logo.png"}
+      .nav-collapse.collapse
+        %ul.nav.menu
+          %li.active
+            %a Home
+          %li{class: "#share"}
+            %a Share your works
+          %li
+            %a Join our community
+          %li
+            %a Login
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+              Categories
+              %b.caret
+            %ul.dropdown-menu
+              %li
+                %a{href: "#"} Action
+              %li
+                %a{href: "#"} Another action
+              %li
+                %a{href: "#"} Something else here
+              %li.divider
+              %li.nav-header Nav header
+              %li
+                %a{href: "#"} Separated link
+              %li
+                %a{href: "#"} One more separated link
+          %li.search-works
+            %form.form-search
+              %input.span4.search-query{type: "text", placeholder:"Discover some works"}

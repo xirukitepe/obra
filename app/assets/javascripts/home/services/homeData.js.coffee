@@ -2,5 +2,5 @@ Obra.factory 'homeData', ($resource) ->
 	homePath: ->
     $resource "/home/comics.json", {},
       query: 
-        merhod: "GET"
+        method: "GET"
         isArray: false

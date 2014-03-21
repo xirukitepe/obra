@@ -1,33 +1,33 @@
--# .container-fluid
--#   = render "slider"
--#   .ribbon
--#     WHAT'S HOT
--#   %br/
--#   %br/
--#   .slider1
--#     - @hots.each do |hot|
--#       .slide
--#         = link_to comic_path(hot) do
--#           %img{src: hot.cover_photo}/
--#   %br/
--#   %br/
--#   .ribbon
--#     NEW RELEASES
--#   %br
--#   %br
--#   .slider1
--#     - @new_realease.each do |new_release|
--#       .slide
--#         = link_to comic_path(new_release) do
--#           %img{src: new_release.cover_photo}/
--#   %br/
--#   .ribbon
--#     RECENTLY UPDATED
--#   %br/
--#   %br/
--#   .slider1
--#     - @updates.each do |up|
--#       .slide
--#         = link_to comic_path(up) do
--#           %img{src: up.cover_photo}/
--#   %br/
+.container-fluid
+  = render "slider"
+  .ribbon
+    WHAT'S HOT
+  %br/
+  %br/
+  .slider1
+    - @hots.each do |hot|
+      .slide
+        = link_to comic_path(hot) do
+          %img{src: hot.cover_photo}/
+  %br/
+  %br/
+  .ribbon
+    NEW RELEASES
+  %br
+  %br
+  .slider1
+    - @new_realease.each do |new_release|
+      .slide
+        = link_to comic_path(new_release) do
+          %img{src: new_release.cover_photo}/
+  %br/
+  .ribbon
+    RECENTLY UPDATED
+  %br/
+  %br/
+  .slider1
+    - @updates.each do |up|
+      .slide
+        = link_to comic_path(up) do
+          %img{src: up.cover_photo}/
+  %br/

@@ -21,3 +21,4 @@
 //= require angular-ui-bootstrap
 //= require app
 //= require_tree .
+//= require_tree ../../../vendor/assets/javascripts/.
