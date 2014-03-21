@@ -1,5 +1,7 @@
 Obra::Application.routes.draw do
   devise_for :users
+
+
   # get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -7,7 +9,10 @@ Obra::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
-  resources :portfolios, only: [:index]
+  resources :users do
+    resources :portfolios, only: [:index]
+  end
+
   resources :comics do
     resources :comic_chapters do
       resources :comic_images

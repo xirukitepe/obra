@@ -7,24 +7,22 @@
     - @hots.each do |hot|
       .slide
         = link_to comic_path(hot) do
-          %img{src: hot.comic_chapters.first.comic_images.where(cover_photo: true).first.try(:comic)}/
-    .slide= "No Comics Found" if @hots.empty?
+          %img{src: hot.cover_photo}/
   %br/
   %br/
+  %b NEW RELEASES
   .slider1
     - @new_realease.each do |new_release|
       .slide
         = link_to comic_path(new_release) do
-          %img{src: new_release.comic_chapters.first.comic_images.where(cover_photo: true).first.try(:comic)}/
-    .slide= "No Comics Found" if @new_realease.empty?
+          %img{src: new_release.cover_photo}/
   %br/
-  <b>RECENTLY UPDATED</b>
+  %b RECENTLY UPDATED
   %br/
   %br/
   .slider1
     - @updates.each do |up|
       .slide
         = link_to comic_path(up) do
-          %img{src: up.comic_chapters.first.comic_images.where(cover_photo: true).first.try(:comic)}/
-    .slide= "No Comics Found" if @updates.empty?
+          %img{src: up.cover_photo}/
   %br/

@@ -9,4 +9,7 @@ class User < ActiveRecord::Base
   has_attached_file :pic
   validates_attachment_content_type :pic, :content_type => ["image/jpg", "image/jpeg", "image/png"]
 
+  def total_likes
+    comics.sum(:no_likes)
+  end
 end
