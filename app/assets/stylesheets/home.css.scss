@@ -1,3 +1,26 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.logo{
+	width: 150px;
+}
+
+ul.menu{
+	top: 30px;
+}
+
+.wrapper{
+	margin-top: 95px;
+	background: #FFF;
+	height: auto;
+}
+
+body{
+	background: url("/assets/abstract.png")
+}
+
+.slider-wrapper { 
+	width: 98%; 
+	margin: 20px auto;
+}
