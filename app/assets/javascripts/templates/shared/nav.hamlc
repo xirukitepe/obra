@@ -9,7 +9,7 @@
         %img.logo{src: "/assets/logo.png"}
       .nav-collapse.collapse
         %ul.nav.menu
-          %li.active
+          %li
             %a Home
           %li.dropdown
             %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
@@ -28,6 +28,8 @@
                 %a{href: "#"} Separated link
               %li
                 %a{href: "#"} One more separated link
+          %li
+            %a{href: '/users/sign_out'} Logout
           %li.search-works
             %form.form-search
               %input.span4.search-query{type: "text", placeholder:"Discover some works"}
