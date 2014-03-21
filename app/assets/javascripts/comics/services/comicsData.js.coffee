@@ -4,3 +4,9 @@ Obra.factory 'comicsData', ($resource) ->
         query:
           method: "GET"
           isArray: false
+
+  comicPath: (id) ->
+    $resource "/api/comics/:id.json", { id: id },
+        query:
+          method: "GET"
+          isArray: false

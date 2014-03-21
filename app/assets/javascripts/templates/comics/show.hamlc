@@ -6,13 +6,9 @@
           %td{width:"30%"}
             %img{src:"/assets/sample.jpg",class:"img-polaroid"}
           %td
-            %h4
-              TITLE GOES HERE
-            %p
-              Some description here.... Some description here.... Some description here.... Some description here....
-              Some description here....
-              Some description here....
-              Some description here....
+            %h4 {{ data.comic.title }}
+            %p {{ data.comic.synopsis }}
+
               %br
               %br
               %span
