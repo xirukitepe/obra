@@ -16,3 +16,6 @@
 /tmp
 /config/database.yml
 /db/schema.rb
+Gemfile.lock
+.ruby-gemset
+.DS_Store

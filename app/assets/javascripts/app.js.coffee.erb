@@ -1,0 +1,36 @@
+# Place all the behaviors and hooks related to the matching controller here.
+# All this logic will automatically be available in application.js.
+# You can use CoffeeScript in this file: http://coffeescript.org/
+#= require hamlcoffee
+#= require_tree ./templates
+
+@Obra = angular.module('obra', ['ngRoute', 'ngResource','ui.bootstrap'], ($routeProvider, $locationProvider, $httpProvider) ->
+  interceptor = ["$rootScope", "$q"
+    (scope, $q) ->
+      success = (response) ->
+        response
+      error = (response) ->
+        status = response.status
+        if status is 401
+          window.location = "/users/sign_in"
+          return
+
+        $q.reject response
+      return (promise) ->
+        promise.then success, error
+  ]
+  $httpProvider.responseInterceptors.push interceptor
+)
+
+
+# Pre-cache templates
+Obra.run ($window, $templateCache) ->
+  templates = $window.JST
+  for fileName of templates
+    fileContent = templates[fileName]
+    $templateCache.put(fileName, fileContent)
+    # Note that we're passing the function fileContent,
+    # and not the object returned by its invocation.
+
+
+#= require_tree ./home

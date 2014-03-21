@@ -1,6 +1,7 @@
 .container-fluid
   = render "slider"
-  <b>WHAT'S HOT</b>
+  .ribbon
+    WHAT'S HOT
   %br/
   %br/
   .slider1
@@ -10,14 +11,18 @@
           %img{src: hot.cover_photo}/
   %br/
   %br/
-  %b NEW RELEASES
+  .ribbon
+    NEW RELEASES
+  %br
+  %br
   .slider1
     - @new_realease.each do |new_release|
       .slide
         = link_to comic_path(new_release) do
           %img{src: new_release.cover_photo}/
   %br/
-  %b RECENTLY UPDATED
+  .ribbon
+    RECENTLY UPDATED
   %br/
   %br/
   .slider1
