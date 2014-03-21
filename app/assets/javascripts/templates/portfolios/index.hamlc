@@ -33,9 +33,10 @@
       <b>MY COMICS STAND</b>
       <br/>
       <br/>
+      %a{class: "btn btn-primary", href: "javascript:void(0)", data: {"ng-click" => "newComic()" }} Add New
       .row.profiler{data: {"ng-repeat" => "comic in comics"}}
         .span2
-          %img{src:"/assets/sample.jpg",class:"img-polaroid"}
+          %img{data: {"ng-src" => "{{comic.cover}}" ,class:"img-polaroid"}
         .span4
           %h4
             {{ comic.title }}
