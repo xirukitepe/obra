@@ -2,7 +2,9 @@ class ComicsController < ApplicationController
   skip_before_filter :authenticate_user!, only: [:show]
   # before_filter :get_comic, except: [:new,:create]
   before_filter :get_comic, except: [:new,:create, :sort, :free]
+
   layout 'home' , except: [:free]
+
 
   def show
 

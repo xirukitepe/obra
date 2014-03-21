@@ -11,8 +11,6 @@
         %ul.nav.menu
           %li.active
             %a Home
-          %li
-            %a Login
           %li.dropdown
             %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
               Categories

@@ -11,8 +11,9 @@
         %ul.nav.menu
           %li.active
             = nav_item "Home", root_path
-          %li
-            = nav_item "Join our community", new_user_registration_path
+          - if !user_signed_in?
+            %li
+              = nav_item "Join our community", new_user_registration_path
           
           
           %li
@@ -46,4 +47,8 @@
               %input.span3.search-query{type: "text", placeholder:"Discover some works"}/
               / %button.btn{type: "submit"}
               /   %i.icon-home
+          - if user_signed_in?
+            %li
+              = nav_item "My Works", user_portfolios_path(current_user)
+
       / /.nav-collapse

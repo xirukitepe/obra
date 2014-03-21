@@ -1,31 +1,32 @@
-%h2 Edit Comics
-= form_for @comic do |f|
-  .field
-    = f.label :title
-    %br
-    = f.text_field :title
-  .field
-    = f.label :synopsis
-    %br
-    = f.text_area :synopsis
-  - Comic::CATEGORIES.each do |key,val|
+.container-fluid  
+  %h3 Edit Comics
+  = form_for @comic do |f|
     .field
-      - if @comic.category.include?(key.to_s)
-        = check_box_tag "comic[category][]", key , checked: true
-      - else
-        = check_box_tag "comic[category][]", key
-    %label #{val}
+      = f.label :title
+      %br
+      = f.text_field :title
+    .field
+      = f.label :synopsis
+      %br
+      = f.text_area :synopsis
+    - Comic::CATEGORIES.each do |key,val|
+      .field
+        - if @comic.category.include?(key.to_s)
+          = check_box_tag "comic[category][]", key , checked: true
+        - else
+          = check_box_tag "comic[category][]", key
+      %label #{val}
 
-  = f.submit
-  %h5 Drag the pictures for sorting (horizontal order(1,2,3))
-  %h3 Chapters
-  -@comic.comic_chapters.each do |chapter|
-    %hr
-    .clear
-    .chapters
-      %h3 #{chapter.title}
-      %ul{class: 'comic_page', style: {cursor: 'move'}, 'data-update-url' => sort_comics_url}
-        - chapter.comic_images.each do |cim|
-          = content_tag_for :li, cim do
-            %image{src: cim.comic}
+    = f.submit class:"btn btn-primary"
+    %h5 Drag the pictures for sorting (horizontal order(1,2,3))
+    %h3 Chapters
+    -@comic.comic_chapters.each do |chapter|
+      %hr
+      .clear
+      .chapters
+        %h4 #{chapter.title}
+        %ul{class: 'comic_page', style: {cursor: 'move'}, 'data-update-url' => sort_comics_url}
+          - chapter.comic_images.each do |cim|
+            = content_tag_for :li, cim do
+              %image{src: cim.comic}
 
