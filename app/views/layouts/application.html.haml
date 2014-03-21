@@ -6,7 +6,7 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
-    = render "/shared/nav"
+    = render :partial => "/shared/nav"
     .container.wrapper
       = yield
-    = render "/shared/footer"
+    = render :partial => "/shared/footer"

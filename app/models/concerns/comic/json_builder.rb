@@ -5,7 +5,7 @@ module Concerns
 
       def custom_hash
         json = attributes
-        json["cover_photo"] = cover_photo.try(:url)
+        json["cover_photo"] = cover_photo.present? ? cover_photo.url(:banner) : ''
         json
       end
     end

@@ -1,6 +1,6 @@
 @Obra.config ($locationProvider, $routeProvider) ->
   $locationProvider.html5Mode(true)
-  $routeProvider.when("/",
+  $routeProvider.when("/welcome",
     controller: "IndexController"
     template: JST["home/index"]
   ).when("/comics/free",
