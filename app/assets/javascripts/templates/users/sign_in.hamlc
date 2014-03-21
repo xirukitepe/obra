@@ -1,0 +1,6 @@
+%h2 Sign in
+%form{url:"/users/sign_in"}
+  %input{id:"user_email", autofocus: true}
+  %input{id:"user_password", autocomplete: "off"}
+  %input{type:"submit"}
+    Sign In
