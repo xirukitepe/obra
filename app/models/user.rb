@@ -7,4 +7,6 @@ class User < ActiveRecord::Base
   has_many :comics
 
   has_attached_file :pic
+  validates_attachment_content_type :pic, :content_type => ["image/jpg", "image/jpeg", "image/png"]
+
 end
