@@ -13,9 +13,14 @@
             = nav_item "Home", root_path
           %li
             = nav_item "Join our community", new_user_registration_path
+          
+          
           %li
-            = nav_item "Login", new_user_session_path
-            / = nav_item "Login", user_session_path
+            - if user_signed_in?
+              = link_to "Log out", destroy_user_session_path, method: :delete, confirm:"Are you sure?"
+            - else
+              = nav_item "Log in", new_user_session_path
+              / = nav_item "Login", user_session_path
           %li
             = link_to "Browse Comics", free_comics_path
           %li.dropdown
