@@ -32,6 +32,10 @@ gem 'haml-rails'
 
 gem 'paperclip'
 
+gem 'angularjs-rails', '~> 1.2.12.1'
+gem 'angular-ui-bootstrap-rails'
+gem 'haml_coffee_assets'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'
 
