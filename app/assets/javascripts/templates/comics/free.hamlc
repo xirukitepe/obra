@@ -7,7 +7,7 @@
         %div Recommended Freebies
       .list-content
         .node{ data: {"ng-repeat" => "comic in data.comics"}}
-          %a.imgLink(href="/comics/{{ comic.id }}")
+          %a.imgLink.img-polaroid(href="/comics/{{ comic.id }}")
             %img(src="{{ comic.cover }}")
           .btn.btn-primary Read
           %a.textLink

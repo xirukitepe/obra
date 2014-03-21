@@ -3,7 +3,7 @@ class Api::ComicsController < ApplicationController
 
   def show
     comic = Comic.find params[:id]
-    render json: { comic: comic }
+    render json: { comic: comic.custom_hash }
   end
 
   def create
