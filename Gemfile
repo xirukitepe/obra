@@ -28,6 +28,8 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 
 gem 'devise'
 
+gem 'haml-rails'
+
 gem 'paperclip'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
