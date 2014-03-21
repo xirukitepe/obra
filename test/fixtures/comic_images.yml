@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  comic_id: 1
+  comic_file_name: MyString
+  comic_file_type: MyString
+  comic_file_size: 1
+  cover_photo: false
+  order: 1
+
+two:
+  comic_id: 1
+  comic_file_name: MyString
+  comic_file_type: MyString
+  comic_file_size: 1
+  cover_photo: false
+  order: 1
