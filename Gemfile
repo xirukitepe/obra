@@ -29,6 +29,7 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 gem 'devise'
 
 gem 'haml-rails'
+gem "cocoon"
 
 gem 'paperclip'
 

@@ -1,0 +1,22 @@
+= form_for @comic do |f|
+  = f.hidden_field :user_id, value: current_user.id
+  = f.hidden_field :date, value: Date.today
+  .field
+    = f.label :title
+    %br
+    = f.text_field :title
+  .field
+    = f.label :synopsis
+    %br
+    = f.text_area :synopsis
+  - Comic::CATEGORIES.each do |key,val|
+    .field
+      = check_box_tag "comic[category][]", key
+      %label #{val}
+
+  #comic_chapters
+    = f.fields_for :comic_chapters, html: {multipart: true} do |chapter|
+      = render 'comic_chapter_fields', :f => chapter
+    .links.btn.btn-primary
+      = link_to_add_association 'add Chapter', f, :comic_chapters
+  = f.submit

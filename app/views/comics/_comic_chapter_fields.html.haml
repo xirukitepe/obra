@@ -1,0 +1,9 @@
+.nested-fields
+  .field
+    %label Chapter Title
+    %br
+    = f.text_field :title
+
+  .field
+    %label Comics Image
+    = f.file_field 'comic_image', multiple: true
