@@ -1,2 +1,50 @@
-.row
-  .span11.wall
+.container-fluid
+  .row.profiler
+    .span5
+      %table
+        %tr
+          %td{width:"30%"}
+            %img{src:"/assets/sample.jpg",class:"img-polaroid"}
+          %td
+            %h4
+              TITLE GOES HERE
+            %p
+              Some description here.... Some description here.... Some description here.... Some description here....
+              Some description here....
+              Some description here....
+              Some description here....
+              %br
+              %br
+              %span
+                79 comments
+                %img{src:"/assets/comment-icon.png"}
+                |
+                29 likes
+                %img{src:"/assets/star.png"}
+  .row.profiler
+    .span12
+      Like
+      %a{href:"#"}
+        %img{src:"/assets/yellow.png"}
+    %br
+    %br
+    .span12
+      %table
+        %tr
+          %td
+            %a
+              Chapter 1 - Blah Blah Blah
+        %tr
+          %td
+            %a
+              Chapter 2 - Blah Blah Blah Blah Blah Blah Blah Blah Blah
+        %tr
+          %td
+            %a
+              Chapter 3 - Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+
+    %br
+    %br
+    .span12
+      <h5>Leave a comment</h5>
+      %textarea
