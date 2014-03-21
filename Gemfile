@@ -22,6 +22,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
 # Bootstrap
+gem "therubyracer"
+gem "less-rails"
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 gem 'devise'
