@@ -20,6 +20,7 @@ Obra::Application.routes.draw do
   end
 
   resources :comics do
+    resources :readers, only: [:index]
     collection do
       get 'free'
       post :sort
