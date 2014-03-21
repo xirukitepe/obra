@@ -8,7 +8,7 @@
       .list-content
         .node{ data: {"ng-repeat" => "comic in data.comics"}}
           %a.imgLink(href="/comics/{{ comic.id }}")
-            %img(src="https://dcomixologyssl.sslcs.cdngc.net/c/JAN120485_1.jpg?h=f53ec2d5a223d6af2b77f9aea88a4261&amp;width=180")
+            %img(src="{{ comic.cover }}")
           .btn.btn-primary Read
           %a.textLink
             .name {{ comic.title }}

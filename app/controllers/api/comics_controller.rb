@@ -16,6 +16,6 @@ class Api::ComicsController < ApplicationController
 
   def free
     comics = Comic.all
-    render json: { comics: comics }
+    render json: { comics: comics.map(&:custom_hash)  }
   end
 end
