@@ -6,9 +6,10 @@ html
     = stylesheet_link_tag    "application", media: "all"
     = csrf_meta_tags
     
-
-  body data-ng-app="obra"
-    div data-ng-view=""
+  = render :partial => "/shared/nav"
+  .container.wrapper
+    body data-ng-app="obra"
+      div data-ng-view=""
 
 
   = javascript_include_tag "application"
