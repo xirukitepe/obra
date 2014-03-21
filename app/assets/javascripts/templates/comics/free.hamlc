@@ -6,89 +6,9 @@
       .section-header
         %div Recommended Freebies
       .list-content
-        .node
-          %a.imgLink(href="")
+        .node{ data: {"ng-repeat" => "comic in data.comics"}}
+          %a.imgLink(href="/comics/{{ comic.id }}")
             %img(src="https://dcomixologyssl.sslcs.cdngc.net/c/JAN120485_1.jpg?h=f53ec2d5a223d6af2b77f9aea88a4261&amp;width=180")
           .btn.btn-primary Read
           %a.textLink
-            .name Saga #1
-        .node
-          %a.imgLink(href="https://www.comixology.com/Saga-1/digital-comic/22207")
-            %img(src="https://dcomixologyssl.sslcs.cdngc.net/c/AUG031264_1.jpg?h=3fb48f94f60b0c4ffaa2748639c0ef8b&width=180")
-          .btn.btn-primary Read
-          %a.textLink
-            .name The Walking Dead
-        .node
-          %a.imgLink(href="https://www.comixology.com/Saga-1/digital-comic/22207")
-            %img(src="https://dcomixologyssl.sslcs.cdngc.net/c/MAR100199.jpg?h=339da139e446823f916db71ab76169fb&width=180")
-          .btn.btn-primary Read
-          %a.textLink
-            .name Superman: War of the Supermen #0
-        .node
-          %a.imgLink(href="https://www.comixology.com/Saga-1/digital-comic/22207")
-            %img(src="https://dcomixologyssl.sslcs.cdngc.net/c/DIG009455_1.jpg?h=a8e7cbd7719d8ead2dc28a4db404b7cc&width=180")
-          .btn.btn-primary Read
-          %a.textLink
-            .name Darkstalkers
-        .node
-          %a.imgLink(href="https://www.comixology.com/Saga-1/digital-comic/22207")
-            %img(src="https://dcomixologyssl.sslcs.cdngc.net/c/DIG014107_2.jpg?h=ecf679614413f6515a2cb484ad42270a&width=180")
-          .btn.btn-primary Read
-          %a.textLink
-            .name Stray Bullets
-        .node
-          %a.imgLink(href="https://www.comixology.com/Saga-1/digital-comic/22207")
-            %img(src="https://dcomixologyssl.sslcs.cdngc.net/c/DEC980201.jpg?h=a0dcd9b60358c81a2fd30741f5d9b800&amp;width=180")
-          .btn.btn-primary Read
-          %a.textLink
-            .name Planetary #1
-        .node
-          %a.imgLink(href="https://www.comixology.com/Saga-1/digital-comic/22207")
-            %img(src="https://dcomixologyssl.sslcs.cdngc.net/c/DIG008483_2.jpg?h=3e9b5d899410a0d6606a3bae47f00baf&width=180")
-          .btn.btn-primary Read
-          %a.textLink
-            .name Sex Criminals
-
-
-        .node
-          %a.imgLink(href="https://www.comixology.com/Saga-1/digital-comic/22207")
-            %img(src="https://dcomixologyssl.sslcs.cdngc.net/c/JAN120485_1.jpg?h=f53ec2d5a223d6af2b77f9aea88a4261&amp;width=180")
-          .btn.btn-primary Read
-          %a.textLink
-            .name Saga #1
-        .node
-          %a.imgLink(href="https://www.comixology.com/Saga-1/digital-comic/22207")
-            %img(src="https://dcomixologyssl.sslcs.cdngc.net/c/AUG031264_1.jpg?h=3fb48f94f60b0c4ffaa2748639c0ef8b&width=180")
-          .btn.btn-primary Read
-          %a.textLink
-            .name The Walking Dead
-        .node
-          %a.imgLink(href="https://www.comixology.com/Saga-1/digital-comic/22207")
-            %img(src="https://dcomixologyssl.sslcs.cdngc.net/c/MAR100199.jpg?h=339da139e446823f916db71ab76169fb&width=180")
-          .btn.btn-primary Read
-          %a.textLink
-            .name Superman: War of the Supermen #0
-        .node
-          %a.imgLink(href="https://www.comixology.com/Saga-1/digital-comic/22207")
-            %img(src="https://dcomixologyssl.sslcs.cdngc.net/c/DIG009455_1.jpg?h=a8e7cbd7719d8ead2dc28a4db404b7cc&width=180")
-          .btn.btn-primary Read
-          %a.textLink
-            .name Darkstalkers
-        .node
-          %a.imgLink(href="https://www.comixology.com/Saga-1/digital-comic/22207")
-            %img(src="https://dcomixologyssl.sslcs.cdngc.net/c/DIG014107_2.jpg?h=ecf679614413f6515a2cb484ad42270a&width=180")
-          .btn.btn-primary Read
-          %a.textLink
-            .name Stray Bullets
-        .node
-          %a.imgLink(href="https://www.comixology.com/Saga-1/digital-comic/22207")
-            %img(src="https://dcomixologyssl.sslcs.cdngc.net/c/DEC980201.jpg?h=a0dcd9b60358c81a2fd30741f5d9b800&amp;width=180")
-          .btn.btn-primary Read
-          %a.textLink
-            .name Planetary #1
-        .node
-          %a.imgLink(href="https://www.comixology.com/Saga-1/digital-comic/22207")
-            %img(src="https://dcomixologyssl.sslcs.cdngc.net/c/DIG008483_2.jpg?h=3e9b5d899410a0d6606a3bae47f00baf&width=180")
-          .btn.btn-primary Read
-          %a.textLink
-            .name Sex Criminals
+            .name {{ comic.title }}

@@ -3,11 +3,13 @@
   $routeProvider.when("/",
     controller: "IndexController"
     template: JST["home/index"]
-  ).when("/comics/free",
-    controller: "IndexController"
-    template: JST["comics/free"]
-  )
-  .when("/users/:id/portfolios",
+  ).when("/users/:id/portfolios",
     controller: "IndexController"
     template: JST["portfolios/index"]
+  ).when("/comics/free",
+    controller: "ComicsFreeController"
+    template: JST["comics/free"]
+  ).when("/comics/:id",
+    controller: "ComicsShowController"
+    template: JST["comics/show"]
   )
