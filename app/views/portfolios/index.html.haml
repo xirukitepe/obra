@@ -18,7 +18,7 @@
           %td{width:"55%"}
             Birthday
           %td
-            = @user.birthday.strftime('%m/%d/%Y')
+            = @user.birthday.try(:strftime, '%m/%d/%Y')
         %tr
           %td{width:"60%"}
             Likes received
