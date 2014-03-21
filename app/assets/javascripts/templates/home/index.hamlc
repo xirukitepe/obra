@@ -1,9 +1,11 @@
 .container-fluid{data: {"ng-controller" => "IndexController"}}
-  %strong {{hello}}
-  <b>WHAT'S HOT</b>
-  %br/
-  %br/
-  -# .slider1
+  .slider1{data: {"ng-show" => "hots.length > 0"}}
+    .slide{"ng-repeat" => "hot in hots"}
+      %a{href: "/comics/{{ hot.id }}"}
+        %img{src: "{{comic.cover_photo}}"}
+  {{ data }}
+  %div{data: {"ng-show" => "hots.length < 0"}}
+    No Comics Found
   -#   - @hots.each do |hot|
   -#     .slide
   -#       = link_to comic_path(hot) do

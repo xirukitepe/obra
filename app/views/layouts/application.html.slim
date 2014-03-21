@@ -11,6 +11,7 @@ html
     = render "/shared/nav"
     .container.wrapper
       div data-ng-view=""
+    = yield
 
 
   = javascript_include_tag "application"
