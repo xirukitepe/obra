@@ -33,6 +33,7 @@ gem 'angularjs-rails', '~> 1.2.12.1'
 gem 'angular-ui-bootstrap-rails'
 gem 'haml_coffee_assets'
 gem 'haml-rails'
+gem "cocoon"
 
 # backend
 gem 'devise'

@@ -9,7 +9,6 @@
         %img.logo{src: "/assets/logo.png"}/
       .nav-collapse.collapse
         %ul.nav.menu
-
           %li.active
             = nav_item "Home", root_path
           %li{class: "#share"}
@@ -18,6 +17,8 @@
             = nav_item "Join our community", "#"
           %li
             = nav_item "Login", "#"
+          %li
+            = link_to "Browse Comics", free_comics_path
           %li.dropdown
             %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
               Categories
@@ -38,7 +39,7 @@
           %li.search-works
             %form.form-search
               / .input-append
-              %input.span4.search-query{type: "text", placeholder:"Discover some works"}/
+              %input.span3.search-query{type: "text", placeholder:"Discover some works"}/
               / %button.btn{type: "submit"}
               /   %i.icon-home
       / /.nav-collapse

@@ -16,6 +16,10 @@ Obra::Application.routes.draw do
   end
 
   resources :comics do
+    collection do
+      get 'free'
+    end
+
     resources :comic_chapters do
       resources :comic_images
     end
@@ -55,7 +59,7 @@ Obra::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

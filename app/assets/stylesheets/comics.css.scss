@@ -1,0 +1,45 @@
+// Place all the styles related to the comics controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.wall {
+  padding: 40px 80px 40px 40px;
+}
+
+.list {
+  border: 1px solid #989898;
+  margin-top: 50px;
+  padding: 0 40px;
+  position: relative;
+
+  .section-header {
+    position: absolute;
+    top: -38px;
+    left: 0;
+    padding: 15px 0;
+    width: 100%;
+  }
+
+  .list-content {
+    padding-top: 50px;
+  }
+
+  .node {
+    text-align: center;
+    padding: 0 8px 24px;
+    display: inline-block;
+    width: 120px;
+    vertical-align: top;
+
+    img {
+      width: 100px;
+    }
+
+    a.imgLink {
+      display: block;
+      min-height: 160px;
+      text-decoration: none;
+      height: 178px;
+    }
+  }
+}

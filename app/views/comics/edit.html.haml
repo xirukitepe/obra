@@ -1,0 +1,19 @@
+%h2 Edit Comics
+= form_for @comic do |f|
+  .field
+    = f.label :title
+    %br
+    = f.text_field :title
+  .field
+    = f.label :synopsis
+    %br
+    = f.text_area :synopsis
+  - Comic::CATEGORIES.each do |key,val|
+    .field
+      - if @comic.category.include?(key.to_s)
+        = check_box_tag "comic[category][]", key , checked: true
+      - else
+        = check_box_tag "comic[category][]", key
+    %label #{val}
+
+  = f.submit

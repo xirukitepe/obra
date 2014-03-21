@@ -1,43 +1,34 @@
 .container-fluid
   .row.profiler
     .span2
-      %img{src: @user.pic,class:"img-polaroid"}
+      %img{src:"http://a.wattpad.com/useravatar/Prettydonnapot.128.510238.jpg",class:"img-polaroid"}
     .span4
       %table
         %tr
           %td{width:"60%"}
             Name
           %td
-            = "#{@user.firstname} #{@user.lastname}"
+            Ugat Salabat
         %tr
-          %td{width:"50%"}
-            Contact No:
+          %td{width:"55%"}
+            Contact No.
           %td
-            = @user.contact_no
+            09178061524
         %tr
           %td{width:"55%"}
             Birthday
           %td
-            = @user.birthday.strftime('%m/%d/%Y')
+            October 5, 1991
         %tr
           %td{width:"60%"}
             Likes received
           %td
-            = @user.total_likes
+            154
   %hr
   
-    %b MY COMIC STAND
-    %br
-    %br
-    - @comics.each do |comic|
-      .row.profiler
-        .span2
-          %img{src:"/assets/sample.jpg",class:"img-polaroid"}
-        .span4
-          %h4
-            TITLE GOES HERE
-          %p
-            Some description here....
+    <b>MY COMICS STAND</b>
+    <br/>
+    <br/>
     .row.profiler
       .span2
         %img{src:"/assets/sample.jpg",class:"img-polaroid"}
@@ -68,9 +59,3 @@
           | 
           24 likes
           %img{src:"/assets/star.png"}
-    
-
-
-  - if current_user.eql?(@user)
-    = link_to 'New Comic', new_comic_path
-

@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require cocoon
 //= require angular
 //= require angular-animate
 //= require angular-resource
@@ -22,3 +23,4 @@
 //= require app
 //= require_tree .
 //= require_tree ../../../vendor/assets/javascripts/.
+

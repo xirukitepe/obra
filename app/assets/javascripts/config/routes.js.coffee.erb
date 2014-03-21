@@ -3,10 +3,11 @@
   $routeProvider.when("/",
     controller: "IndexController"
     template: JST["home/index"]
-    redirectTo: (current, path, search) ->
-      if search.goto
-        path + search.goto
-      else
-        path
-
+  ).when("/comics/free",
+    controller: "IndexController"
+    template: JST["comics/free"]
+  )
+  .when("/users/:id/portfolios",
+    controller: "IndexController"
+    template: JST["portfolios/index"]
   )
