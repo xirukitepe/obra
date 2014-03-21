@@ -6,6 +6,8 @@ gem 'rails', '4.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'mysql2'
 
+
+gem 'slim'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -26,15 +28,16 @@ gem "therubyracer"
 gem "less-rails"
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
-gem 'devise'
-
-gem 'haml-rails'
-
-gem 'paperclip'
-
+#angular
 gem 'angularjs-rails', '~> 1.2.12.1'
 gem 'angular-ui-bootstrap-rails'
 gem 'haml_coffee_assets'
+gem 'haml-rails'
+
+# backend
+gem 'devise'
+gem 'paperclip'
+
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'
@@ -46,6 +49,8 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
