@@ -9,14 +9,21 @@ Obra::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
+  match "/home/comics" => "home#comics", via: [:get]
+
   resources :users do
-    resources :portfolios, only: [:index]
+    resources :portfolios, only: [:index] do
+      collection do
+        get 'list'
+      end
+    end
   end
 
   resources :comics do
     resources :readers, only: [:index]
     collection do
       get 'free'
+      post :sort
     end
 
     resources :comic_chapters do

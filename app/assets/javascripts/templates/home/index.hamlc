@@ -1,30 +1,29 @@
-.container-fluid{data: {"ng-controller" => "IndexController"}}
-  %strong {{hello}}
-  <b>WHAT'S HOT</b>
-  %br/
-  %br/
-  -# .slider1
-  -#   - @hots.each do |hot|
-  -#     .slide
-  -#       = link_to comic_path(hot) do
-  -#         %img{src: hot.comic_chapters.first.comic_images.where(cover_photo: true).first.try(:comic)}/
-  -#   .slide= "No Comics Found" if @hots.empty?
-  -# %br/
-  -# %br/
-  -# .slider1
-  -#   - @new_realease.each do |new_release|
-  -#     .slide
-  -#       = link_to comic_path(new_release) do
-  -#         %img{src: new_release.comic_chapters.first.comic_images.where(cover_photo: true).first.try(:comic)}/
-  -#   .slide= "No Comics Found" if @new_realease.empty?
-  -# %br/
-  -# <b>RECENTLY UPDATED</b>
-  -# %br/
-  -# %br/
-  -# .slider1
-  -#   - @updates.each do |up|
-  -#     .slide
-  -#       = link_to comic_path(up) do
-  -#         %img{src: up.comic_chapters.first.comic_images.where(cover_photo: true).first.try(:comic)}/
-  -#   .slide= "No Comics Found" if @updates.empty?
-  -# %br/
+%nav-menus
+
+.container.wrapper
+  .container-fluid{data: {"ng-controller" => "IndexController"}}
+    .ribbon{data: {"ng-show" => "hot != undefined"}}
+      WHAT'S HOT
+    %br/
+    %br/
+    %div{data: {"ng-show" => "hot != undefined"}}
+      %a{href: "/comics/{{ hot.id }}"}
+        %img{src: "{{hot.cover_photo}}"}
+    %br/
+    %br/
+    .ribbon{data: {"ng-show" => "new_releases != undefined"}}
+      NEW RELEASES
+    %br
+    %br
+    %div{data: {"ng-show" => "new_releases != undefined"}}
+      %a{href: "/comics/{{ new_releases.id }}"}
+        %img{src: "{{new_releases.cover_photo}}"}
+    %br/
+    %br/
+    .ribbon{data: {"ng-show" => "new_releases != undefined"}}
+      RECENTLY UPDATED
+    %br/
+    %br/
+    %div{data: {"ng-show" => "recently_updated != undefined"}}
+      %a{href: "/comics/{{ recently_updated.id }}"}
+        %img{src: "{{recently_updated.cover_photo}}"}

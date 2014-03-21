@@ -22,6 +22,8 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem "jquery-ui-rails"
+gem 'acts_as_list'
 
 # Bootstrap
 gem "therubyracer"

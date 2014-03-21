@@ -4,7 +4,7 @@
 #= require hamlcoffee
 #= require_tree ./templates
 
-@Obra = angular.module('obra', ['ngRoute', 'ngResource','ui.bootstrap'], ($routeProvider, $locationProvider, $httpProvider) ->
+@Obra = angular.module('obra', ['ngRoute', 'ngResource', 'ngSanitize', 'ui.bootstrap'], ($routeProvider, $locationProvider, $httpProvider) ->
   interceptor = ["$rootScope", "$q"
     (scope, $q) ->
       success = (response) ->
@@ -33,4 +33,7 @@ Obra.run ($window, $templateCache) ->
     # and not the object returned by its invocation.
 
 
+#= require_tree ./shared
 #= require_tree ./home
+#= require_tree ./portfolios
+#= require_tree ./modals

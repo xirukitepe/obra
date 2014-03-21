@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.ui.all
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require cocoon
@@ -18,7 +19,9 @@
 //= require angular-animate
 //= require angular-resource
 //= require angular-route
+//= require angular-sanitize
 //= require angular-ui-bootstrap
 //= require app
 //= require_tree .
+//= require_tree ../../../vendor/assets/javascripts/.
 

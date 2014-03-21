@@ -5,19 +5,14 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.brand{href: root_path}
-        %img.logo{src: "/assets/logo.png"}/
+      %a.brand{href: "/"}
+        %img.logo{src: "/assets/logo.png"}
       .nav-collapse.collapse
         %ul.nav.menu
           %li.active
-            = nav_item "Home", root_path
+            %a Home
           %li
-            = nav_item "Join our community", new_user_registration_path
-          %li
-            = nav_item "Login", new_user_session_path
-            / = nav_item "Login", user_session_path
-          %li
-            = link_to "Browse Comics", free_comics_path
+            %a Login
           %li.dropdown
             %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
               Categories
@@ -37,8 +32,4 @@
                 %a{href: "#"} One more separated link
           %li.search-works
             %form.form-search
-              / .input-append
-              %input.span3.search-query{type: "text", placeholder:"Discover some works"}/
-              / %button.btn{type: "submit"}
-              /   %i.icon-home
-      / /.nav-collapse
+              %input.span4.search-query{type: "text", placeholder:"Discover some works"}

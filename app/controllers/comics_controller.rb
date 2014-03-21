@@ -1,6 +1,7 @@
 class ComicsController < ApplicationController
   skip_before_filter :authenticate_user!, only: [:show]
   before_filter :get_comic, except: [:new,:create]
+  before_filter :get_comic, except: [:new,:create, :sort]
 
 
   def show
@@ -17,16 +18,12 @@ class ComicsController < ApplicationController
       if params[:comic][:comic_chapters_attributes].present?
         d = params[:comic][:comic_chapters_attributes].first
         files = d[1][:comic_image]
-        i = 1
         chap_id = @comic.comic_chapters.first
         files.each do |img|
           cmg = ComicImage.new
           cmg.comic_chapter = chap_id
-          cmg.page_no = i
           cmg.comic = img
-          cmg.cover_photo = true if i.eql?(1)
           cmg.save
-          i += 1
         end
       end
     else
@@ -43,9 +40,15 @@ class ComicsController < ApplicationController
     redirect_to user_portfolios_path(@comic.user)
   end
 
-
   def destroy
     @comic.destroy
+  end
+
+  def sort
+    params[:comic_image].each_with_index do |id, index|
+      ComicImage.where(id: id).update_all(position: index+1, cover_photo: index.eql?(0))
+    end
+    render nothing: true
   end
 
   private
