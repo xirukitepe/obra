@@ -26,8 +26,12 @@ gem "therubyracer"
 gem "less-rails"
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
-gem 'devise'
+#angular
+gem 'angularjs-rails', '~> 1.2.12.1'
+gem 'angular-ui-bootstrap-rails'
+gem 'haml_coffee_assets'
 
+gem 'devise'
 gem 'paperclip'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
