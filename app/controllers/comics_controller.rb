@@ -3,7 +3,8 @@ class ComicsController < ApplicationController
   # before_filter :get_comic, except: [:new,:create]
   before_filter :get_comic, except: [:new,:create, :sort, :free]
 
-  layout "home"
+  layout 'home' , except: [:free]
+
 
   def show
 

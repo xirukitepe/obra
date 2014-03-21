@@ -5,9 +5,10 @@
     %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
   / Carousel items
   .carousel-inner
-    .active.item …
-    .item …
-    .item …
+    - @comics.each_with_index do |img,i|
+      .item{class: "#{i.eql?(0) ? 'active' : ''}", style: "background-color: #000000"}
+        %center
+          %image{src: img.comic.url(:original)}
   / Carousel nav
   %a.carousel-control.left{"data-slide" => "prev", href: "#myCarousel"} ‹
   %a.carousel-control.right{"data-slide" => "next", href: "#myCarousel"} ›
