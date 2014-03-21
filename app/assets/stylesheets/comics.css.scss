@@ -43,3 +43,15 @@
     }
   }
 }
+
+ul.comic_page {
+  list-style: none outside none;
+  width: 600px;
+  li {
+    float: left;display: block;width: 200px;height: 100px;
+    img{
+      width: 200px;
+      height: 100px;
+    }
+  }
+}
