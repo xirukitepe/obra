@@ -5,11 +5,13 @@ class Feedback < ActiveRecord::Base
   scope :comments, lambda {|comic| where(comic_id: comic, type: 'comment')}
   scope :ratings, lambda {|comic| where(comic_id: comic, type: 'rating')}
 
-  after_save :add_likes, if: self.type.eql?('like')
+  after_save :add_likes
 
   def add_likes
-    comic.likes = comic.likes + 1
-    comic.save
+    if type.eql?('like')
+      comic.likes = comic.likes + 1
+      comic.save
+    end
   end
 
 

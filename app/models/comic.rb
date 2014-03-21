@@ -1,6 +1,6 @@
 class Comic < ActiveRecord::Base
-  has_many :comic_chapters
-  has_many :feedbacks
+  has_many :comic_chapters, dependent: :destroy
+  has_many :feedbacks, dependent: :destroy
 
   belongs_to :user
 

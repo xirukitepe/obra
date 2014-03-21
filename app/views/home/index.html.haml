@@ -4,67 +4,28 @@
   %br/
   %br/
   .slider1
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
+    - @hots.each do |hot|
+      .slide
+        = link_to comic_path(hot) do
+          %img{src: hot.comic_chapters.first.comic_images.where(cover_photo: true).first.try(:comic)}/
+    .slide= "No Comics Found" if @hots.empty?
   RECENTLY PUBLISHED
   %br/
   %br/
   .slider1
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
+    - @new_realease.each do |new_release|
+      .slide
+        = link_to comic_path(new_release) do
+          %img{src: new_release.comic_chapters.first.comic_images.where(cover_photo: true).first.try(:comic)}/
+    .slide= "No Comics Found" if @new_realease.empty?
   %br/
   RECENTLY UPDATED
   %br/
   %br/
   .slider1
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
-    .slide
-      %img{src: "/assets/sample.jpg"}/
+    - @updates.each do |up|
+      .slide
+        = link_to comic_path(up) do
+          %img{src: up.comic_chapters.first.comic_images.where(cover_photo: true).first.try(:comic)}/
+    .slide= "No Comics Found" if @updates.empty?
   %br/
